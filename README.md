@@ -12,14 +12,14 @@ Includes modifications use `docker-machine` on macOS.
    ![Certificate assistant](https://raw.githubusercontent.com/thomasantony/vscode-cpp-docker-debug/master/docs/cert_assistant.png)
 
 
-3. Set the Name as `gdb-cert`, Identitiy Type as `Self Signed Root` and Certificate Type as `Code Signing` and click "Create".
+3. Set the Name as `gdb-cert`, Identity Type as `Self Signed Root` and Certificate Type as `Code Signing` and click "Create".
 4. In a terminal, run `codesign -s gdb.cert /usr/local/bin/gdb` to sign the `gdb` executable.
 
 ### Build and start docker environment
 
 1. Open the project in Visual Studio Code.
 2. Press `⌘ + Shift + P`, type `Run Task`, Press Enter, and then select `Build Development Image` from the dropdown.
-3. Next, run the following tasks using the same propcess:
+3. Next, run the following tasks using the same process:
    * `Start Development Environment`
    * `Enable Port-Forwarding for Docker-Machine`
    * `Run CMake`
