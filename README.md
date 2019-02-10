@@ -19,7 +19,7 @@ Includes modifications use `docker-machine` on macOS.
 
 1. Open the project in Visual Studio Code.
 2. Press `⌘ + Shift + P`, type `Run Task`, Press Enter, and then select `Build Development Image` from the dropdown.
-3. Next, run the following tasks using the same propcess:
+3. Next, run the following tasks using the same process:
    * `Start Development Environment`
    * `Enable Port-Forwarding for Docker-Machine`
    * `Run CMake`
