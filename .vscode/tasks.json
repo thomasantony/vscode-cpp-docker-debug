@@ -2,31 +2,31 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "start develop env",
+            "label": "Start Development Environment",
             "type": "shell",
             "command": "docker-compose -f docker-compose.yml run --service-ports --name devenv dev-image bash",
             "problemMatcher": []
         },
         {
-            "label": "Enable port-forwarding",
+            "label": "Enable Port-Forwarding for Docker-Machine",
             "type": "shell",
             "command": "./.vscode/pf 2000",
             "problemMatcher": []
         },
         {
-            "label": "stop develop env",
+            "label": "Stop Development Environment",
             "type": "shell",
             "command": "docker-compose -f docker-compose.yml down",
             "problemMatcher": []
         },
         {
-            "label": "cmake generate",
+            "label": "Run CMake",
             "type": "shell",
             "command": "docker exec -it devenv cmake -DCMAKE_BUILD_TYPE=Debug ..",
             "problemMatcher": []
         },
         {
-            "label": "build",
+            "label": "Build",
             "type": "shell",
             // Make this the default build command.
             "group": {
@@ -39,7 +39,7 @@
             ]
         },
         {
-            "label": "clean",
+            "label": "Clean",
             "type": "shell",
             "command": "docker exec -it devenv make clean",
             "problemMatcher": [
@@ -47,19 +47,19 @@
             ]
         },
         {
-            "label": "make package",
+            "label": "Make Package",
             "type": "shell",
             "command": "docker exec -it devenv make package",
         },
         {
-            "label": "start-gdbserver",
+            "label": "Start GDB server",
             "type": "shell",
             // not using -it so that it can be a preLaunchTask
             "command": "docker exec -d devenv  gdbserver :2000 /src/build/hello",
             "problemMatcher": []
         },
         {
-            "label": "build develop image",
+            "label": "Build Development Image",
             "type": "shell",
             // not using -it so that it can be a preLaunchTask
             "command": "docker-compose -f docker-compose.yml build",
@@ -67,14 +67,14 @@
         },
         {
             // running without debugging
-            "label": "run app",
+            "label": "Run App",
             "type": "shell",
             // not using -it so that it can be a preLaunchTask
             "command": "docker exec -d devenv  /src/build/hello",
             "problemMatcher": []
         },
         {
-            "label": "stop app",
+            "label": "Stop App",
             "type": "shell",
             // not using -it so that it can be a preLaunchTask
             "command": "docker exec -d devenv  pkill your_app",

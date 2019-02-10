@@ -6,7 +6,7 @@
             "type": "cppdbg",
             "request": "launch",
             "miDebuggerServerAddress": "localhost:2000",
-            "preLaunchTask": "start-gdbserver",
+            "preLaunchTask": "Start GDB server",
             "miDebuggerPath": "/usr/local/bin/gdb",
             "targetArchitecture": "x64",
             "program": "${workspaceRoot}/build/hello",
