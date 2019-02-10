@@ -1,5 +1,6 @@
 build
 !build/.gitkeep
+.DS_Store
 
 # Prerequisites
 *.d
