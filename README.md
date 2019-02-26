@@ -12,7 +12,7 @@ Includes modifications use `docker-machine` on macOS.
    ![Certificate assistant](https://raw.githubusercontent.com/thomasantony/vscode-cpp-docker-debug/master/docs/cert_assistant.png)
 
 
-3. Set the Name as `gdb-cert`, Identity Type as `Self Signed Root` and Certificate Type as `Code Signing` and click "Create".
+3. Set the Name as `gdb.cert`, Identity Type as `Self Signed Root` and Certificate Type as `Code Signing` and click "Create".
 4. In a terminal, run `codesign -s gdb.cert /usr/local/bin/gdb` to sign the `gdb` executable.
 
 ### Build and start docker environment
